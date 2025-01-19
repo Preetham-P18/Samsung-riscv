@@ -38,6 +38,8 @@ $ ./a.out
 $ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum.o sum.c
 ```
 
+![WhatsApp Image 2025-01-16 at 11 16 39_9fd4762e](https://github.com/user-attachments/assets/61470c79-3c60-4440-9a25-748c446cdade)
+
 
 Verify that the file has been compiled using below command
 
@@ -52,6 +54,8 @@ Obtain the assembly level code file by using below command.
 ```
 $ riscv64-unknown-elf-objdump -d sum.o
 ```
+![WhatsApp Image 2025-01-16 at 11 16 39_e0b7d930](https://github.com/user-attachments/assets/5f0621a8-f3c3-40d8-8cfc-99a27c47be28)
+
 
 
 * Here the **-d** stands for disassemble
@@ -80,10 +84,16 @@ $ riscv64-unknown-elf-objdump -d sum.o | less
 
 **1. Create a simple c file as in below image and compile it with gcc and see the output.**
 
+![WhatsApp Image 2025-01-16 at 11 17 35_4c35aeb1](https://github.com/user-attachments/assets/70e35837-333e-4243-9568-606e02e2561e)
+
+
 **2. Now verify that your code is giving same output even when you use RISC-V compiler as shown.**
 * Note here that spike command is used in place of ./a.out to see the output and successfully we have obtained same output in both try.
 ```
 $ riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o num.o num.c
+
+![WhatsApp Image 2025-01-16 at 11 17 36_aa0e6069](https://github.com/user-attachments/assets/642a0089-9581-4640-954f-15bfcc00ce73)
+
 
 $ spike pk num.o
 ```
@@ -92,6 +102,8 @@ $ spike pk num.o
 * Dump file of -O1
 
    ```$ riscv64-unknown-elf-objdump -d num.o | less```
+
+![WhatsApp Image 2025-01-16 at 11 17 36_d1aea7c9](https://github.com/user-attachments/assets/97c20c73-f3ee-4dc1-ba20-ec41fc7ed9b4)
 
 
 * Dump file of -Ofast
@@ -104,6 +116,8 @@ $ spike pk num.o
   ```
   until pc 0 100b0
   ```
+
+![WhatsApp Image 2025-01-16 at 11 17 37_cafb3715](https://github.com/user-attachments/assets/7c17b406-46c2-47b5-b634-dd63912bb7e3)
 
   
 * What does the above command make is that it will load register operation upto that address
@@ -127,5 +141,8 @@ $ spike pk num.o
 
 * [RISC-V card](https://www.cs.sfu.ca/~ashriram/Courses/CS295/assets/notebooks/RISCV/RISCV_CARD.pdf)
 * [RISC-V instruction set summary](https://pages.hmc.edu/harris/ddca/ddcarv/DDCArv_AppB_Harris.pdf)
+
+![WhatsApp Image 2025-01-17 at 21 02 43_0ba7c7e3](https://github.com/user-attachments/assets/39d14840-9383-4bde-b6b6-7304db3dcc93)
+
 
 </details>
